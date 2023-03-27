@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Stock Market Dashboard</title>
+	<style>
+		body, html {
+			margin: 0;
+			padding: 0;
+			font-family: Arial, sans-serif;
+			background-color: #F5F5F5;
+			color: #333333;
+		}
+
+		.container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding: 20px;
+			max-width: 1200px;
+			margin: 0 auto;
+		}
+
+		h1 {
+			font-size: 36px;
+			margin-bottom: 20px;
+			color: #333333;
+			text-align: center;
+		}
+
+		.row {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			margin-bottom: 20px;
+		}
+
+		.column {
+			flex-basis: calc(33.33% - 20px);
+			background-color: #FFFFFF;
+			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+			padding: 20px;
+			border-radius: 5px;
+			margin-bottom: 20px;
+		}
+
+		.column:last-of-type {
+			margin-right: 0;
+		}
+
+		.graph {
+			background-color: #2E4F4F;
+			width: 100%;
+			height: 300px;
+			margin-bottom: 20px;
+		}
+
+		.content {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		p {
+			font-size: 18px;
+			margin-bottom: 10px;
+			line-height: 1.5;
+			color: #333333;
+			text-align: center;
+		}
+
+		button {
+			background-color: #0E8388;
+			color: #FFFFFF;
+			border: none;
+			padding: 10px 20px;
+			font-size: 18px;
+			border-radius: 5px;
+			cursor: pointer;
+			margin-top: 20px;
+			transition: background-color 0.3s ease;
+		}
+
+		button:hover {
+			background-color: #2C3333;
+		}
+
+    .main-container {
+      display: flex;
+
+      width:100vw;
+
+      justify-content: center;
+      align-content: space-between;
+    }
+
+    .pink-box {
+      border-radius: 10px;
+
+      width: 200px;
+      height: 100px;
+      margin: 5px;
+      
+      background-color: #2E4F4F;
+    }
+
+    .reddish-box {
+      border-radius: 10px;
+
+      width: 200px;
+      height: 100px;
+      margin: 5px;
+            
+      background-color: #0E8388;
+    }
+
+    .light-box {
+      border-radius: 10px;
+
+      width: 200px;
+      height: 100px;
+      margin: 5px;
+      
+      background-color: #CBE4DE;
+    }
+      
+    
+	</style>
+</head>
+<body>
+  {% include 'Base_platform/navbar.html' %}
+    <div class="container">
+      <header>
+        <h1>NFT Xchange Dashboard</h1>
+        <div class="main-container">
+          <div class="pink-box">
+            Companies
+          </div>
+          <div class="reddish-box">
+            Amount Invested
+          </div>
+          <div class="light-box">
+            Amount gained
+          </div>
+            
+        </div>
+      </header>
+      <main>
+        <section class="card">
+          <h2>Stock Prices</h2>
+          <canvas id="stockChart"></canvas>
+        </section>
+        <section class="card">
+          <h2>News Feed</h2>
+          <ul>
+            <li><a href="#">Article 1</a></li>
+            <li><a href="#">Article 2</a></li>
+            <li><a href="#">Article 3</a></li>
+          </ul>
+        </section>
+        <section class="card">
+          <h2>Market Analysis</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.</p>
+        </section>
+      </main>
+      {% include 'Base_platform/footer.html' %}
+    </div>
+  </body>
+</html>

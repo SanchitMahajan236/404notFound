@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/SignUp</title>
+
+  <link rel="stylesheet" href="{% static 'css/login.css' %}">
+</head>
+<body>
+    <div class="hero">
+        <div class="form-box">
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="login()">Log In</button>
+                <button type="button" class="toggle-btn" onclick="register()">Register</button>
+            </div>
+            <form id="login" class="input-group" action="" method="POST">
+                <h1 class="form-title">Welcome back!</h1>
+                <input type="hidden" name="form-type" id="A12" value="Login">
+                <input type="text" class="input-field" placeholder="UserName" name="UserName" required>
+                <input type="password" class="input-field" placeholder="Enter Password" name="Password" required>
+                <input type="checkbox" class="check-box"><span>Remember me</span>
+                <button type="submit" class="submit-btn">Log In</button>
+            </form>
+            <form id="register" class="input-group" action="" method="POST">
+                <h1 class="form-title">Lets SignUP!</h1>
+                <input type="hidden" name="form-type" id="A12" value="Register">
+                <input type="text" class="input-field" placeholder="User Id" name="UserName" required>
+                <input type="email" class="input-field" placeholder="Email Id" name="Email" required>
+                <input type="password" class="input-field" placeholder="Enter Password" name="Password" required>
+                <input type="checkbox" class="check-box" id="check" onclick="enable()"><span>I agree to the 
+                    <a href="#" style="text-decoration:none;">terms</a> and 
+                    <a href="#"  style="text-decoration:none;">conditions</a></span>
+                <button type="submit" class="submit-btn" id="submit_btn" disabled="true">Register</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        var x= document.getElementById("login");
+        var y= document.getElementById("register");
+        var z= document.getElementById("btn");
+        var elem = document.getElementById('A12');
+        function register(){
+            x.style.left = "-400px";
+            y.style.left = "50px";
+            z.style.left = "110px";
+            elem.value = "Register";
+        }
+
+        function login(){
+            x.style.left = "50px";
+            y.style.left = "450px";
+            z.style.left = "0";
+            elem.value = "Login";
+        }
+
+        function enable(){
+            var check = document.getElementById("check");
+            var submit_btn = document.getElementById("submit_btn");
+            if(check.checked){
+                submit_btn.removeAttribute("disabled");   
+            }   else{
+                submit_btn.disabled = "true";
+            }
+        }
+
+    </script>
+
+</body>
+</html>

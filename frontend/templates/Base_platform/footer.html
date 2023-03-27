@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML 5 Boilerplate</title>
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+  </head>
+  <body>
+    <div class="footer-class">
+      <div class="main-container">
+          <div class="sub-container">
+            <div class="footer-logo">
+              404NotFound
+            </div>
+            <ul>
+              <li><a href="{% url 'Base_platform:StockBot' %}">X Bot</a></li>
+              <li><a href="#">NFTexchange</a></li>
+            </ul>
+          </div>
+          <div class="sub-container">
+            <ul>  
+              <li><a href="{% url 'Base_platform:Home' %}">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="{% url 'Base_platform:Analysis' %}">Analysis</a></li>
+            </ul>
+          </div>
+          <div class="sub-container">
+            <li><a href="#">Saksham@gmail.com</a></li>
+            <li><a href="#">Fb | Twitter | Insta </a></li>
+            <li><a href="#">Home</a></li>
+          </div>
+            
+      </div>
+      <div class="copyright">&copy; hackEDcode @ 2023 </div>
+    </div>
+  </body>
+</html>  

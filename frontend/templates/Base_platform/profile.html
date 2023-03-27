@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Profile Page</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/profile.css' %}">
+</head>
+<body>
+
+  {% include 'Base_platform/navbar.html' %}
+  
+	<div class="container">
+		<div class="profile">
+			<img src="profile-pic.jpg" alt="Profile Picture">
+			<h1>John Doe</h1>
+			<h3>Software Engineer</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet mi ac eros interdum, non lacinia quam dapibus.</p>
+			<div class="contact">
+				<p><strong>Email:</strong> john.doe@gmail.com</p>
+				<p><strong>Phone:</strong> (123) 456-7890</p>
+				<p><strong>LinkedIn:</strong> <a href="#">linkedin.com/in/johndoe</a></p>
+				<p><strong>GitHub:</strong> <a href="#">github.com/johndoe</a></p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

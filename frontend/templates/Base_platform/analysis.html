@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Stock Market Analysis</title>
+	<style>
+		body, html {
+			margin: 0;
+			padding: 0;
+			font-family: Arial, sans-serif;
+			background-color: #208bf7e56b;
+			color: #CBE4DE;
+		}
+
+		.container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding: 20px;
+			max-width: 1200px;
+			margin: 0 auto;
+		}
+
+		h1 {
+			font-size: 36px;
+			margin-bottom: 20px;
+			color: #2C3333;
+		}
+
+		.graph {
+			background-color: #2E4F4F;
+			width: 100%;
+			height: 400px;
+			margin-bottom: 20px;
+		}
+
+		.content {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		p {
+			font-size: 18px;
+			margin-bottom: 10px;
+			line-height: 1.5;
+			color: #2C3333;
+		}
+
+		button {
+			background-color: #0E8388;
+			color: #CBE4DE;
+			border: none;
+			padding: 10px 20px;
+			font-size: 18px;
+			border-radius: 5px;
+			cursor: pointer;
+			margin-top: 20px;
+			transition: background-color 0.3s ease;
+		}
+
+		button:hover {
+			background-color: #2C3333;
+		}
+	</style>
+</head>
+<body>
+
+  {% include 'Base_platform/navbar.html' %}
+  
+	<div class="container">
+		<h1>NFT Xchange Analysis</h1>
+		<div class="graph"></div>
+		<div class="content">
+			<p>Welcome to our Xchange analysis website. We provide real-time analysis of various NFTs based on news statements and historical data.</p>
+			<p>Our proprietary algorithms calculate a risk factor between 0 and 100 for each NFT trade, allowing you to make informed decisions about your investments.</p>
+			<button>Sign Up Now</button>
+		</div>
+	</div>
+
+  {% include 'Base_platform/footer.html' %}
+</body>
+</html>

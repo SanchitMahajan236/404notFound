@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NFT Xchange</title>
+    <link rel="stylesheet" href="{% static 'css/navcss.css' %}">
+  </head>
+  <style>
+    .login-box {
+      border: 2px solid black;
+      border-radius: 5px;
+
+      font-weight: 700;
+      color: black;
+
+      width: 100px;
+
+    }
+  </style>
+  <body>
+    
+    <nav>
+      <a href ="#"><font color="#00ffd9">NFT</font> Xchange</a>
+      <input type="checkbox" id="toggle-menu">
+      <label for="toggle-menu" class="hamburger-menu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </label>
+      <ul class="menu">
+        <li><a href="{% url 'Base_platform:Home' %}">Dashboard</a></li>
+        <li><a href="{% url 'BasePlatform:Profile' %}">Profile</a></li>
+        <li><a href="#">Investments</a></li>
+        <li><a href="#">MarketPlace</a></li>
+        <li><a href="{% url 'BasePlatform:StockBot' }">X Bot</a></li>
+        <li><a href="{% url 'BasePlatform:Analysis' %}">Analysis</a></li>
+        <li><a href="#">Collateral</a></li>
+        <li><a href="{% url 'Base_platform:Login' %}" style="display: flex;justify-content: center;align-items: center;"><div class="login-box">Login / signup</div></a></li>
+      </ul>
+    </nav>
+
+  </body>
+</html>
